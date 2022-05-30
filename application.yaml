@@ -1,5 +1,5 @@
 server:
-  port: xxxx
+  port: 3000
   mode: debug
 
 datasource:
@@ -17,7 +17,7 @@ redis:
   dbName: 0
 
 jwt:
-  secretKey: xxx
+  secretKey: golang
 
 email:
   username: xxx

@@ -17,5 +17,10 @@ func (server *Server) InitRouter() {
 		visitor.POST("/register/:code", v1.Register)
 	}
 
+	test := r.Group("/api/test")
+	{
+		test.POST("/token", v1.TokenTest, middleware.JwtMiddleware())
+	}
+
 	server.Router = r
 }

@@ -3,7 +3,6 @@ package db
 import (
 	"CanRich/config"
 	"CanRich/logger"
-	"CanRich/model"
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -34,7 +33,7 @@ func InitDB() {
 
 	DB.SingularTable(true)
 	//数据库迁移
-	DB.AutoMigrate(&model.User{})
+	//DB.AutoMigrate(&model.User{})
 	DB.DB().SetMaxOpenConns(50)
 	DB.DB().SetMaxIdleConns(10)
 	DB.DB().SetConnMaxLifetime(10 * time.Second)
