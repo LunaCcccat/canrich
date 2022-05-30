@@ -1,0 +1,3 @@
+p, admin, /tt, read
+p, admin, /tt, write
+p, user, /tt, read

@@ -1,6 +1,7 @@
 package server
 
 import (
+	"CanRich/api/testapi"
 	v1 "CanRich/api/v1"
 	"CanRich/middleware"
 	"github.com/gin-gonic/gin"
@@ -19,7 +20,8 @@ func (server *Server) InitRouter() {
 
 	test := r.Group("/api/test")
 	{
-		test.POST("/token", v1.TokenTest, middleware.JwtMiddleware())
+		test.POST("/token", testapi.TokenTest, middleware.JwtMiddleware())
+		test.POST("/casbin", testapi.CasbinTest)
 	}
 
 	server.Router = r

@@ -4,7 +4,6 @@ import (
 	"CanRich/ecode"
 	"CanRich/model"
 	"CanRich/service"
-	"CanRich/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -47,17 +46,6 @@ func Login(c *gin.Context) {
 	_ = c.ShouldBind(&user)
 	fmt.Println(user)
 	code, token := service.Login(user.Username, user.Password)
-	c.JSON(http.StatusOK, gin.H{
-		"code":  code,
-		"token": token,
-		"msg":   ecode.GetErrMsg(code),
-	})
-}
-
-func TokenTest(c *gin.Context) {
-	var user model.User
-	_ = c.ShouldBind(&user)
-	code, token := utils.GenerateToken(user.Username, user.ID, 10)
 	c.JSON(http.StatusOK, gin.H{
 		"code":  code,
 		"token": token,
