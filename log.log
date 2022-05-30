@@ -1,0 +1,5 @@
+2022-05-29T18:42:58.606+0800	ERROR	db/database.go:32	Failed to connect database. Error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
+2022-05-29T18:43:48.856+0800	ERROR	db/database.go:31	Failed to connect database. Error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
+2022-05-29T18:43:50.902+0800	INFO	cache/init.go:29	dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2022-05-29T18:49:46.142+0800	ERROR	db/database.go:32	Failed to connect database. Error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
+2022-05-29T18:50:34.541+0800	ERROR	db/database.go:32	Failed to connect database. Error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
